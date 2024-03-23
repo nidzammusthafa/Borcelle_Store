@@ -7,7 +7,7 @@ import { Heart } from "lucide-react";
 
 const HeartButton = ({ product }: { product: ProductType }) => {
   const router = useRouter();
-  const user = useUser();
+  const { user } = useUser();
 
   const [loading, setLoading] = useState(false);
   const [signedInUser, setSignedInUser] = useState<UserType | null>(null);
@@ -30,7 +30,7 @@ const HeartButton = ({ product }: { product: ProductType }) => {
     if (user) {
       getUser();
     }
-  }, [user]);
+  });
 
   const handleLike = async (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>

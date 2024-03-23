@@ -1,5 +1,4 @@
 import Collections from "@/components/Collections";
-import NavBar from "@/components/NavBar";
 import ProductList from "@/components/ProductList";
 import Image from "next/image";
 import React from "react";
